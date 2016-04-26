@@ -1,0 +1,18 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8"
+
+// variables
+// mixins
+@mixin size($n)
+  height: $n
+  width: $n
+// vendors
+@import "vendors/bourbon/bourbon"
+@import "vendors/foundation-sites/scss/foundation"
+
+// partials
+@import "base"
+@import "nav"
+@import "landingpage"

@@ -1,0 +1,60 @@
+---
+layout: landingpage
+---
+<nav id="socials-top">
+  <div class="row">
+    <div class="small-12 columns">
+      {% include social-links.html %}
+    </div>
+  </div>
+</nav>
+<main>
+  <div class="row">
+    <div class="small-12 columns">
+      <img src="{{site.data.settings.logo_path}}" alt="{{site.data.settings.title}}" class="logo">
+      <h1>{{site.data.settings.title}}</h1>
+      <p class="summary editable">Listen to 30 minute, in-depth interviews with top entrepreneurial professionals in the
+recruiting, mortgage, financial/wealth management and chiropractic industries.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-3 columns">
+      <div class="card1">
+        <a href="">Wealth Management</a>
+      </div>
+    </div>
+    <div class="large-3 columns">
+      <div class="card2">
+        <a href="">Mortgage</a>
+      </div>
+    </div>
+    <div class="large-3 columns">
+      <div class="card3">
+        <a href="">Talent Reruiter</a>
+      </div>
+    </div>
+    <div class="large-3 columns">
+      <div class="card4">
+        <a href="">Chiropractor</a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="row">
+      <div class="small-12 columns">
+        <nav>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns">
+        <a href="#">Privacy Policy</a>
+        <p>&copy; {{ site.time | date: '%Y' }} Vyral Marketing</p>
+      </div>
+    </div>
+  </footer>
+</main>
