@@ -3,16 +3,30 @@
 ---
 @charset "utf-8"
 
-// variables
-// mixins
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= * Variables
+
+// -=-=-=-=-=-=-=-=-= * Fonts
+$bodyfont: 'Lato', helvetica, arial, sans-serif
+$headerfont: 'Lato', helvetica, arial, sans-serif
+
+// -=-=-=-=-=-=-=-=-= * Colors
+$brand: #09426A
+$brand-dark: #072940
+$secondary: #EC7124
+
+
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= * Mixins
 @mixin size($n)
   height: $n
   width: $n
-// vendors
+
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= * Includes
+
+// -=-=-=-=-=-=-=-=-= * Vendors
 @import "vendors/bourbon/bourbon"
 @import "vendors/foundation-sites/scss/foundation"
 
-// partials
+// -=-=-=-=-=-=-=-=-= * Partials
 @import "base"
 @import "nav"
 @import "landingpage"

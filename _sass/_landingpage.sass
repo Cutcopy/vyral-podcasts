@@ -4,3 +4,28 @@
   background-size: cover
   background-position: center center
   background-attachment: fixed
+  @include filter(brightness(90%))
+  //@include animation(fadeIn 1s linear 1)
+  text-align: center
+  color: white
+  h1
+    font-size: 4rem
+    font-weight: 200
+    margin-bottom: 0
+  footer
+    position: absolute
+    bottom: 0
+    width: 100%
+  .summary
+    max-width: 60rem
+    margin: 10px auto
+
+@include keyframes(fadeIn)
+  from
+    @include filter(brightness(0%))
+  to
+    @include filter(brightness(100%))
+
+
+.card1
+  height: 1
