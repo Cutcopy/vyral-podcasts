@@ -1,6 +1,7 @@
 ---
 layout: landingpage
 ---
+{% comment %}
 <nav id="socials-top">
   <div class="row">
     <div class="small-12 columns">
@@ -8,6 +9,7 @@ layout: landingpage
     </div>
   </div>
 </nav>
+{% endcomment %}
 <main>
   <div class="row">
     <div class="small-12 columns">
@@ -18,45 +20,43 @@ recruiting, mortgage, financial/wealth management and chiropractic industries.</
     </div>
   </div>
   <div class="row">
-    <div class="large-3 columns">
-      <div class="card1">
-        <a href="">Wealth Management</a>
-      </div>
-    </div>
-    <div class="large-3 columns">
-      <div class="card2">
-        <a href="">Mortgage</a>
-      </div>
-    </div>
-    <div class="large-3 columns">
-      <div class="card3">
-        <a href="">Talent Reruiter</a>
-      </div>
-    </div>
-    <div class="large-3 columns">
-      <div class="card4">
-        <a href="">Chiropractor</a>
-      </div>
+    <button type="button" name="button" class="industry-drop" onclick="#">Choose Your Industry <span class="caret">&#9660;</span></button>
+    <ul id="industries">
+      <li>
+        <a href="#" class="card wealth">Wealth Management</a>
+      </li>
+      <li>
+        <a href="#" class="card mortgage">Mortgage</a>
+      </li>
+      <li>
+        <a href="#" class="card recruitment">Talent Reruiter</a>
+      </li>
+      <li>
+        <a href="#" class="card chiropractor">Chiropractor</a>
+      </li>
+    </ul>
+  </div>
+</main>
+<!-- footer -->
+<footer>
+  <div class="row">
+    <div class="small-12 columns">
+      <nav>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Join Our Facebook Group</a></li>
+        </ul>
+      </nav>
     </div>
   </div>
+  <div class="row">
+    <div class="small-12 columns">
+      <a href="#">Privacy Policy</a>
+      <p>&copy; {{ site.time | date: '%Y' }} Vyral Marketing</p>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="/js/main.js"></script>
 
-  <!-- footer -->
-  <footer>
-    <div class="row">
-      <div class="small-12 columns">
-        <nav>
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-12 columns">
-        <a href="#">Privacy Policy</a>
-        <p>&copy; {{ site.time | date: '%Y' }} Vyral Marketing</p>
-      </div>
-    </div>
-  </footer>
-</main>
+</footer>

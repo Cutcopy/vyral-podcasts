@@ -13,6 +13,8 @@ $headerfont: 'Lato', helvetica, arial, sans-serif
 $brand: #09426A
 $brand-dark: #072940
 $secondary: #EC7124
+$shadow: transparentize(black, 0.3)
+// -=-=-=-=-=-=-=-=-= * Shadows
 
 
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= * Mixins
@@ -20,11 +22,17 @@ $secondary: #EC7124
   height: $n
   width: $n
 
+@mixin shadow
+  box-shadow: 0 2px 4px $shadow
+@mixin text-shadow
+  text-shadow: 0 2px 4px $shadow
+@mixin drop-shadow
+  @include filter(drop-shadow(0 2px 4px $shadow))
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= * Includes
 
 // -=-=-=-=-=-=-=-=-= * Vendors
 @import "vendors/bourbon/bourbon"
-@import "vendors/foundation-sites/scss/foundation"
+@import "vendors/foundation-sites/assets/foundation-flex"
 
 // -=-=-=-=-=-=-=-=-= * Partials
 @import "base"
