@@ -1,6 +1,26 @@
 ---
 layout: blog
 class: page-chiropractor
-title: chiropractor
+title: The Chiropractic Entrepeneur
 permalink: /chiropractors/
 ---
+{% for post in site.categories.chiropractor %}
+  <article class="row post-preview">
+    <div class="small-12 columns">
+      <header class="row post-header">
+        <div class="small-12 columns">
+          <a href="{{post.url}}" class="post-title">{{post.title}}</a> <span>{{post.date |  date_to_string |  date: '%B %d, %Y'}}</span> posted by {{post.author}}
+        </div>
+      </header>
+      <div class="row">
+        <div class="small-1 columns">
+          <img src="{{post.author_image}}" alt="{{post.author}}">
+        </div>
+        <div class="small-11 columns">
+          <audio src="{{post.audio_file}}" controls="controls" preload="auto"></audio>
+        </div>
+      </div>
+      <p class="post-excerpt">{{post.excerpt | truncate: 100 | strip_html}} <a href="{{post.url}}">Read More</a></p>
+    </div>
+  </article>
+{% endfor %}
