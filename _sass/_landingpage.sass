@@ -26,21 +26,22 @@
   .logo
     @include drop-shadow
     padding: 2rem
-
+  a
+    color: white
+    border-bottom: 0px solid transparent
+    padding-bottom: 2px
+    @include transition(0.3s)
+    &:hover
+      border-bottom: 1px solid white
+      color: tint($brand, 70%)
+      
 @include keyframes(fadeIn)
   from
     @include filter(brightness(0%))
   to
     @include filter(brightness(100%))
 
-a
-  color: white
-  border-bottom: 0px solid transparent
-  padding-bottom: 2px
-  @include transition(0.3s)
-  &:hover
-    border-bottom: 1px solid white
-    color: tint($brand, 70%)
+
 
 
 

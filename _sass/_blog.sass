@@ -1,0 +1,34 @@
+.page-chiropractor
+  background-image: url(/images/chiropractor.png)
+  background-size: cover
+  background-attachment: fixed
+
+.blog-title
+  color: white
+  font-weight: 200
+  text-align: center
+
+.optin-wrapper
+  color: white
+
+.blog-optin
+  input[type="email"]
+    color: white
+    width: 90%
+    display: inline-block
+    background: transparentize(white, 0.5)
+    border-width: 0
+    @include placeholder
+      color: white
+    &:focus
+      @include placeholder
+        color: transparent
+  input[type="submit"]
+    border: 2px solid white
+    background: transparent
+    font-weight: bold
+    padding: 0.45rem
+    @include transition(0.3s)
+    &:hover
+      background: white
+      color: #BE957B
