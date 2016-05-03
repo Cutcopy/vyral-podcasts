@@ -11,6 +11,7 @@ $headerfont: 'Lato', helvetica, arial, sans-serif
 
 // -=-=-=-=-=-=-=-=-= * Colors
 $brand: #09426A
+$brand-light: lighten($brand, 20%)
 $brand-dark: #072940
 $secondary: #EC7124
 $shadow: transparentize(black, 0.3)
@@ -33,10 +34,12 @@ $shadow: transparentize(black, 0.3)
 // -=-=-=-=-=-=-=-=-= * Vendors
 @import "vendors/bourbon/bourbon"
 @import "vendors/foundation-sites/assets/foundation-flex"
-@import "vendors/audioplayer.scss"
+//@import "vendors/audioplayer.scss"
 // -=-=-=-=-=-=-=-=-= * Partials
 @import "base"
 @import "nav"
+@import "footer"
+@import "audioplayer"
 // -=-=-=-=-=-=-=-=-= * Pages
 @import "landingpage"
 @import "blog"

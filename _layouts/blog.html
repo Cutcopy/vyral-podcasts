@@ -8,10 +8,11 @@
         <h1 class="blog-title">{{page.title}}</h1>
       </div>
     </div>
-
-    {% include blog-optin.html %}
-    {{ content }}
-    {% include pagination.html %}
+    <div class="pad">
+      {% include blog-optin.html %}
+      {{ content }}
+      {% include pagination.html %}
+    </div>
     <footer>
       <div class="row">
         <div class="small-12 columns">
@@ -19,10 +20,12 @@
           <p>&copy; {{ site.time | date: '%Y' }} Vyral Marketing</p>
         </div>
       </div>
-      <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>  
+      <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
+      <script src="/js/foundation.min.js"></script>
       <script src="/js/main.js"></script>
       <script src="/js/audioplayer.js"></script>
       <script>$( function() { $( 'audio' ).audioPlayer(); } );</script>
+      <script>$('#responsive-menu').foundation('toggleMenu');</script>
     </footer>
   </body>
 </html>
