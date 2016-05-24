@@ -10,7 +10,7 @@ permalink: /chiropractors/
     <div class="small-12 columns">
       <header class="row post-header">
         <div class="small-12 columns">
-          <a href="{{post.url}}" class="post-title">{{post.title}}</a> <span>{{post.date |  date_to_string |  date: '%B %d, %Y'}}</span> posted by {{post.author}}
+          <a href="{{post.url}}" class="post-title">{{post.title}}</a>
         </div>
       </header>
       <div class="row">
@@ -25,7 +25,8 @@ permalink: /chiropractors/
       </div>
       <div class="row">
         <div class="small-12 columns post-excerpt">
-          <p>{{post.excerpt | truncate: 100 | strip_html}} <a href="{{post.url}}">Read More &raquo;</a></p>
+          <p class="posted-by"><span>{{post.date |  date_to_string |  date: '%B %d, %Y'}}</span> posted by {{post.author}}</p>
+          <p>{{post.excerpt | truncate: 120 | strip_html}} <a href="{{post.url}}">Keep Reading &raquo;</a></p>
         </div>
       </div>
     </div>

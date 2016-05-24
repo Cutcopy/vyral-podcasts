@@ -1,54 +1,19 @@
-#socials-top
-  .socials
-    list-style-type: none
-    text-align: right
-    margin-right: 1rem
-    li
-      display: inline
-      margin: 0.5rem
-    a
-      text-decoration: none
-  svg
-    @include size(2rem)
-    fill: white
-    @include drop-shadow
-//container
-.nav-wrapper
-  color: white
-  @include display(flex)
-  @include align-items(center)
-  @include align-content(center)
-//logo
-#nav-logo
-  @include size(3rem)
-  margin: 1rem
+.nav-wrap
+  +display(flex)
+  +align-items(flex-end)
 
-.top-nav
-  width: 66%
-  display: inline-block
+.nav-logo
+  display: inline
+  svg
+    width: rem(50)
+  .title
+    color: white
+.main-nav
   text-align: right
-  float: right
+  +text-decoration-style(double)
   li
     display: inline-block
-    margin: 0.5rem
-  span
-    border-bottom: 1px solid transparent
-    padding: 0.7rem 1rem
-  a
-    color: white
+
 
 .submenu
   display: none
-  background: transparentize($brand, 0.5)
-  position: absolute
-  top: 2rem
-  width: 5rem
-  @include shadow
-  li
-    display: block
-
-.dropdown-btn
-  position: relative
-
-.dropdown-btn:hover .submenu
-  display: block

@@ -16,8 +16,11 @@
 
 .blog-title
   color: white
-  font-weight: 200
+  font-weight: 300
   text-align: center
+
+.posted-by
+  font-size: rem(10)
 
 .post-excerpt
   background: #D8D8D8
@@ -30,25 +33,35 @@
 
 .optin-wrapper
   color: white
+  p
+    font-size: 1.3rem
 
 .blog-optin
+  +display(flex)
+  +justify-content(space-between)
+  height: 2.4375rem
+  margin-bottom: 2rem
   input[type="email"]
     color: white
-    width: 90%
+    width: 100%
     display: inline-block
-    background: transparentize(white, 0.4)
+    background: transparentize(white, 0.6)
     border-width: 0
-    @include placeholder
+    margin-right: 0.7rem
+    +transition(1s, cubic-bezier(0, -0.05, 0.19, -0.49))
+    +placeholder
       color: white
     &:focus
-      @include placeholder
+      +placeholder
         color: transparent
+      background: white
+      color: $brand
   input[type="submit"]
     border: 2px solid white
     background: transparent
     font-weight: bold
     padding: 0.45rem
-    @include transition(0.3s)
+    +transition(0.3s)
     &:hover
       background: white
       color: #BE957B

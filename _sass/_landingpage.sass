@@ -30,11 +30,11 @@
     color: white
     border-bottom: 0px solid transparent
     padding-bottom: 2px
+    text-decoration: none
     @include transition(0.3s)
     &:hover
       border-bottom: 1px solid white
-      color: tint($brand, 70%)
-      
+
 @include keyframes(fadeIn)
   from
     @include filter(brightness(0%))
@@ -81,7 +81,9 @@
     //@include linear-gradient($brand, $brand-dark)
     &:hover
       background: transparentize($secondary, 0.3)
-
+    a
+      &:hover
+        border-bottom: 0px solid transparent 
 
 .card
   background-repeat: no-repeat
