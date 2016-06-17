@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body class="page-{{page.categories}}">
+    {% include nav.html %}
+    <div class="row">
+      <div class="small-12 columns">
+        <h1 class="blog-title">{{page.title}}</h1>
+      </div>
+    </div>
+    <div class="pad">
+      {% include blog-optin.html %}
+    </div>
+    <div class="row">
+      <article class="post small-12 columns">
+        <header class="row post-header">
+          <div class="small-12 columns">
+            <a href="{{post.url}}" class="post-title">{{page.title}}</a>
+          </div>
+        </header>
+        <div class="row">
+          <div class="small-1">
+            <a href="/about/">
+              <img src="{{page.author_image}}" alt="{{post.author}}">
+            </a>
+          </div>
+          <div class="small-11 audio-wrapper">
+          	<audio src="{{page.audio_file}}" preload="auto" controls></audio>
+          </div>
+        </div>
+        <div class="content">
+          {{ content }}
+        </div>
+      </article>
+    </div>
+    <footer>
+      <div class="row">
+        <div class="small-12 columns">
+          <a href="#">Privacy Policy</a>
+          <p>&copy; {{ site.time | date: '%Y' }} Vyral Marketing</p>
+        </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
+      <script src="/js/foundation.min.js"></script>
+      <script src="/js/main.js"></script>
+      <script src="/js/audioplayer.js"></script>
+      <script>$( function() { $( 'audio' ).audioPlayer(); } );</script>
+      <script>$('#responsive-menu').foundation('toggleMenu');</script>
+    </footer>
+  </body>
+</html>
